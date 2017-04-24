@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 def watermark(text):
     
-    original = Image.open('C:\Ellen\photo\stone.jpg').convert('RGBA')
+    original = Image.open('stone.jpg').convert('RGBA')
     imageWaterMark = Image.new('RGBA', original.size, (255,255,255,0))
 
     width, height = original.size
@@ -22,7 +22,7 @@ def watermark(text):
 
     out = Image.alpha_composite(original, imageWaterMark)
     out.show()
-    out.save('C:\Ellen\photo\w.jpg')
+    out.save('stone_water.jpg')
 
 def main():
     wartermark_text = input("Please enter the watermarking text: ")
